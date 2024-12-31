@@ -13,12 +13,18 @@ Since Discord’s window has some limitations, you can’t click links directly.
 1. Open an incognito tab in your favorite browser *(In Google Chrome and Edge, use the shortcut CTRL+SHIFT+N)*;
 2. Type `youtube.com` and press "Enter";
 3. Click on the *Login button* located in the top-right corner of the screen;
+
+![YouTube login button](1.webp)
+
 4. The Google login page will open. Copy the URL from the address bar;
+
+![Adress baro](2.webp)
+
 5. Close the browser; you won’t need it anymore.
 
 The link looks like the one below. Don't use my link, create your own to avoid problems.
 
-https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dpt%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&ec=65620&hl=pt-BR&ifkv=AeZLP9-B2WPkDIicNMd8QnWbEtou2IBL7L9hP--Br1PYgbO1YmhzjVX_DiQNuMpTxoYWUdFpRlr9Mw&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1895556158%3A1735676385839979&ddm=1
+`https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dpt%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&ec=65620&hl=pt-BR&ifkv=AeZLP9-B2WPkDIicNMd8QnWbEtou2IBL7L9hP--Br1PYgbO1YmhzjVX_DiQNuMpTxoYWUdFpRlr9Mw&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1895556158%3A1735676385839979&ddm=1`
 
 ## 2. Find the Discord Configuration File
 
@@ -30,6 +36,8 @@ The easiest way to access the configuration directory is to type `%appdata%` in 
 
 1. Press the "Windows" key on your keyboard;
 2. Type `%appdata%` and press Enter.
+
+![Configuration folder](3.webp)
 
 ## 3. Edit the *settings.json* File
 
@@ -44,7 +52,12 @@ Now it’s time to configure the parameter in Discord’s settings file. You’l
 
 > Pay attention to the formatting to avoid corrupting the file. Don’t forget the double quotes around the parameter name and the URL you replaced. Also, don’t forget the comma on the previous line.
 
+![Closing Discord](4.webp)
+
 5. Save the file by going to `File > Save` or using the shortcut `CTRL+S`;
+
+![Windows Notepad](5.webp)
+
 6. Close Notepad.
 
 The file should look something like this:
@@ -75,9 +88,13 @@ When you open Discord, you’ll see the Google login page - we’re almost there
 
 This step involves simply entering your email and password, completing two-step verification, and hoping for the best.
 
+![Login screen](6.webp)
+
 After logging in, you’ll be redirected to YouTube. If you have multiple channels, a window will appear for you to select the channel where your video viewing history will be stored.
 
 Select the option not to ask again which channel to use and double-click the desired channel name.
+
+![Channel selector](7.webp)
 
 > Due to the previously mentioned limitation on links, clicking the channel name may not seem to do anything, but the configuration will be saved.
 
