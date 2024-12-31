@@ -14,11 +14,11 @@ Since Discord’s window has some limitations, you can’t click links directly.
 2. Type `youtube.com` and press "Enter";
 3. Click on the *Login button* located in the top-right corner of the screen;
 
-![YouTube login button](1.webp)
+![YouTube login button](images/1.webp)
 
 4. The Google login page will open. Copy the URL from the address bar;
 
-![Adress baro](2.webp)
+![Adress baro](images/2.webp)
 
 5. Close the browser; you won’t need it anymore.
 
@@ -37,7 +37,7 @@ The easiest way to access the configuration directory is to type `%appdata%` in 
 1. Press the "Windows" key on your keyboard;
 2. Type `%appdata%` and press Enter.
 
-![Configuration folder](3.webp)
+![Configuration folder](images/3.webp)
 
 ## 3. Edit the *settings.json* File
 
@@ -52,11 +52,11 @@ Now it’s time to configure the parameter in Discord’s settings file. You’l
 
 > Pay attention to the formatting to avoid corrupting the file. Don’t forget the double quotes around the parameter name and the URL you replaced. Also, don’t forget the comma on the previous line.
 
-![Closing Discord](4.webp)
+![Closing Discord](images/4.webp)
 
 5. Save the file by going to `File > Save` or using the shortcut `CTRL+S`;
 
-![Windows Notepad](5.webp)
+![Windows Notepad](images/5.webp)
 
 6. Close Notepad.
 
@@ -88,13 +88,13 @@ When you open Discord, you’ll see the Google login page - we’re almost there
 
 This step involves simply entering your email and password, completing two-step verification, and hoping for the best.
 
-![Login screen](6.webp)
+![Login screen](images/6.webp)
 
 After logging in, you’ll be redirected to YouTube. If you have multiple channels, a window will appear for you to select the channel where your video viewing history will be stored.
 
 Select the option not to ask again which channel to use and double-click the desired channel name.
 
-![Channel selector](7.webp)
+![Channel selector](images/7.webp)
 
 > Due to the previously mentioned limitation on links, clicking the channel name may not seem to do anything, but the configuration will be saved.
 
