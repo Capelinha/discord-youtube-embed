@@ -1,6 +1,8 @@
-# How to Use Your YouTube Premium Account to Avoid Ads in Discord Embeds
+# How to avoid ads in Discord embeds using your YouTube Premium subscription
 
 In recent months, ads in YouTube Embeds have become increasingly frequent and annoying. Fortunately, there’s an easy and effective way to connect your YouTube Premium account to Discord to block all these ads. This allows you to enjoy your videos without interruptions, both in chats and in Watch Together sessions with friends, ensuring a smoother and more enjoyable experience.
+
+I'll leave a [support video](https://bit.ly/4gyeMJt) to make it easier to understand. Sorry for my English and my giant post, I tried to make it as clear as possible. I'm a poor autistic programmer from a third world country: 
 
 Technically speaking, I found a way to configure Discord to open any website in the app window using a parameter called `"WEBAPP_ENDPOINT"`. This lets us access the YouTube login page and link your Discord account with YouTube Premium.
 
@@ -14,7 +16,11 @@ Since Discord’s window has some limitations, you can’t click links directly.
 4. The Google login page will open. Copy the URL from the address bar;
 5. Close the browser; you won’t need it anymore.
 
-## 2. Edit the Discord Configuration File
+The link looks like the one below. Don't use my link, create your own to avoid problems.
+
+https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dpt%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&ec=65620&hl=pt-BR&ifkv=AeZLP9-B2WPkDIicNMd8QnWbEtou2IBL7L9hP--Br1PYgbO1YmhzjVX_DiQNuMpTxoYWUdFpRlr9Mw&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1895556158%3A1735676385839979&ddm=1
+
+## 2. Find the Discord Configuration File
 
 Now that we have the login link, we need to configure the `"WEBAPP_ENDPOINT"` parameter in Discord’s configuration file, located in the folder `C:\Users\YourName\AppData\Roaming\discord\`.
 
