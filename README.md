@@ -4,6 +4,8 @@ Nos últimos meses, os anúncios nos Embeds do YouTube se tornaram cada vez mais
 
 Falando tecnicamente, achei uma forma de configurar o Discord para abrir qualquer site na janela do aplicativo, usando um parâmetro chamado `"WEBAPP_ENDPOINT"`. Assim podemos acessar a página de login do YouTube e linkar a conta do Discord com o YouTube Premium.
 
+Veja o vídeo caso o texto não tenha ficado claro: https://youtu.be/iQ7GatyWfpg
+
 ## 1. Pegar o link de login do YouTube
 
 Como a janela do Discord tem algumas limitações, você não consegue clicar diretamente em links. Por isso, vamos usar um link direto para facilitar o processo e garantir que tudo funcione. e, por isso, precisa do link que te leve diretamente para a página de login do Google.
