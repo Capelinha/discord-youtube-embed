@@ -1,49 +1,47 @@
-# Como usar sua conta do YouTube Premium para não ver anúncios nos Embeds do Discord
+# How to Use Your YouTube Premium Account to Avoid Ads in Discord Embeds
 
-Nos últimos meses, os anúncios nos Embeds do YouTube se tornaram cada vez mais frequentes e incômodos. Felizmente, existe uma maneira fácil e eficaz de conectar sua conta do YouTube Premium ao Discord para bloquear todos esses anúncios. Com isso, você pode curtir seus vídeos sem interrupções, tanto nos chats quanto no Watch Together com seus amigos, garantindo uma experiência mais tranquila e divertida.
+In recent months, ads in YouTube Embeds have become increasingly frequent and annoying. Fortunately, there’s an easy and effective way to connect your YouTube Premium account to Discord to block all these ads. This allows you to enjoy your videos without interruptions, both in chats and in Watch Together sessions with friends, ensuring a smoother and more enjoyable experience.
 
-Falando tecnicamente, achei uma forma de configurar o Discord para abrir qualquer site na janela do aplicativo, usando um parâmetro chamado `"WEBAPP_ENDPOINT"`. Assim podemos acessar a página de login do YouTube e linkar a conta do Discord com o YouTube Premium.
+Technically speaking, I found a way to configure Discord to open any website in the app window using a parameter called `"WEBAPP_ENDPOINT"`. This lets us access the YouTube login page and link your Discord account with YouTube Premium.
 
-Veja o vídeo caso o texto não tenha ficado claro: https://youtu.be/iQ7GatyWfpg
+## 1. Get the YouTube Login Link
 
-## 1. Pegar o link de login do YouTube
+Since Discord’s window has some limitations, you can’t click links directly. So, we’ll use a direct link to make the process easier and ensure everything works.
 
-Como a janela do Discord tem algumas limitações, você não consegue clicar diretamente em links. Por isso, vamos usar um link direto para facilitar o processo e garantir que tudo funcione. e, por isso, precisa do link que te leve diretamente para a página de login do Google.
+1. Open an incognito tab in your favorite browser *(In Google Chrome and Edge, use the shortcut CTRL+SHIFT+N)*;
+2. Type `youtube.com` and press "Enter";
+3. Click on the *Login button* located in the top-right corner of the screen;
+4. The Google login page will open. Copy the URL from the address bar;
+5. Close the browser; you won’t need it anymore.
 
-1. Abra uma aba anônima no seu navegador favorito *(No Google Chrome e Edge, você pode utilizar o atalho CTRL+SHIFT+N)*;
-2. Digite o endereço `youtube.com` e aperte "Enter";
-3. Clique sobre o *botão de Login* localizado no canto superior direito da tela;
-4. Será aberta a tela de login do Google. Copie o URL da barra de endereços;
-5. Feche o navegador; não precisaremos mais dele.
+## 2. Edit the Discord Configuration File
 
-## 2. Editar o arquivo de configurações do Discord
+Now that we have the login link, we need to configure the `"WEBAPP_ENDPOINT"` parameter in Discord’s configuration file, located in the folder `C:\Users\YourName\AppData\Roaming\discord\`.
 
-Agora que temos o link de login, precisamos configurar o parâmetro `"WEBAPP_ENDPOINT"` dentro do arquivo de configurações do Discord, localizado na pasta `C:\Users\nome\AppData\Roaming\discord\`.
+*If you’re using Discord PTB or Canary, there will be folders with the respective names in the Roaming directory.*
 
-*Se você estiver utilizando o Discord PTB ou o Canary, haverá pastas com os respectivos nomes dentro do diretório Roaming.*
+The easiest way to access the configuration directory is to type `%appdata%` in the Windows search bar and press Enter. From there, navigate to the Discord folder.
 
-O jeito mais fácil de acessar o diretório de configuração é digitar `%appdata%` na barra de busca do Windows e apertar Enter. A partir daí, navegue até a pasta do Discord.&#x20;
+1. Press the "Windows" key on your keyboard;
+2. Type `%appdata%` and press Enter.
 
-1. Aperte a tecla "Windows" no seu teclado;
-2. Digite `%appdata%` e aperte Enter.
+## 3. Edit the *settings.json* File
 
-## 3. Editar o arquivo *settings.json*
+Now it’s time to configure the parameter in Discord’s settings file. You’ll find this file in the folder you just accessed, named `settings.json`. You can use any text editor; I recommend the *Windows Notepad*.
 
-Chegou a hora de configurar o parâmetro dentro do arquivo de configurações do Discord. Você encontrará este arquivo na pasta que acabou de acessar, com o nome `settings.json`. Você pode usar qualquer editor de texto; eu recomendo o *Bloco de Notas do Windows*.
+> Before continuing, ensure that Discord is maximized, occupying the full screen of your monitor. Then, close it by clicking the "X". Check the system tray to see if it’s still running. If it is, right-click the icon and select `Quit Discord`.
 
-> Antes de continuar, garanta que o Discord está com a janela maximizada, ocupando o máximo do seu monitor. Em seguida, feche-o clicando no "X". Verifique na bandeja do sistema se ele ainda está aberto. Se estiver, clique com o botão direito do mouse no ícone e escolha `Quit Discord`.
+1. Locate the `settings.json` file, right-click on it, and select to edit with Notepad;
+2. Add a comma on the last line before the closing braces `}`;
+3. Add a new line before the closing braces `}` with the text `"WEBAPP_ENDPOINT": "URL_YOU_COPIED"`;
+4. Replace *URL_YOU_COPIED* with the text you copied from the browser’s address bar;
 
-1. Localize o arquivo `settings.json`, clique com o botão direito do mouse sobre ele e selecione para editar no Bloco de Notas;
-2. Adicione uma vírgula na última linha antes do fechamento das chaves `}`;
-3. Adicione uma nova linha antes do fechamento das chaves `}` com o texto `"WEBAPP_ENDPOINT": "URL_QUE_VOCE_COPIOU"`;
-4. Substitua *URL\_QUE\_VOCE\_COPIOU* pelo texto que você copiou da barra de endereços do navegador;
+> Pay attention to the formatting to avoid corrupting the file. Don’t forget the double quotes around the parameter name and the URL you replaced. Also, don’t forget the comma on the previous line.
 
-> Atenção à formatação para evitar corromper o arquivo. Não esqueça das aspas duplas no nome do parâmetro e no URL que você substituiu. Também não esqueça da vírgula na linha acima.
+5. Save the file by going to `File > Save` or using the shortcut `CTRL+S`;
+6. Close Notepad.
 
-5. Salve o arquivo em `Arquivo > Salvar` ou usando o atalho `CTRL+S`;
-6. Feche o Bloco de Notas.
-
-O arquivo deve ficar parecido com este exemplo abaixo:
+The file should look something like this:
 
 ```
 {
@@ -65,30 +63,30 @@ O arquivo deve ficar parecido com este exemplo abaixo:
 }
 ```
 
-## 4. Realizar login com sua conta do Google
+## 4. Log in with Your Google Account
 
-Ao abrir o Discord, você verá o login do Google - estamos quase lá! Faça login com a conta que possui a assinatura do YouTube Premium.
+When you open Discord, you’ll see the Google login page - we’re almost there! Log in with the account that has the YouTube Premium subscription.
 
-Este passo envolve apenas digitar seu e-mail e senha, realizar a verificação em duas etapas e torcer para dar certo.
+This step involves simply entering your email and password, completing two-step verification, and hoping for the best.
 
-Após o login, você será redirecionado para o YouTube. Caso tenha mais de um canal, será exibida a janela para selecionar o canal que armazenará o histórico de visualização dos vídeos.
+After logging in, you’ll be redirected to YouTube. If you have multiple channels, a window will appear for you to select the channel where your video viewing history will be stored.
 
-Selecione a opção para não perguntar novamente qual canal utilizar e dê dois cliques no nome do canal desejado.
+Select the option not to ask again which channel to use and double-click the desired channel name.
 
-> Devido à limitação mencionada anteriormente sobre links, ao clicar no nome do canal nada parecerá acontecer, mas a configuração ficará salva. 
+> Due to the previously mentioned limitation on links, clicking the channel name may not seem to do anything, but the configuration will be saved.
 
-Para fechar o a janela é preciso recorrer ao icone na bandeja do sistema, clique com o botão direito do mouse no ícone e escolha \`Quit Discord\`.
+To close the window, go to the system tray icon, right-click it, and select `Quit Discord`.
 
-## 5. Desfazer modificação no arquivo de configurações
+## 5. Undo the Configuration File Modification
 
-Agora que você fez login com sucesso no YouTube, é necessário remover o parâmetro `WEBAPP_ENDPOINT` da configuração do Discord.
+Now that you’ve successfully logged into YouTube, you need to remove the `WEBAPP_ENDPOINT` parameter from Discord’s configuration file.
 
-1. Reabra o arquivo `settings.json`, clicando com o botão direito do mouse sobre ele e selecionando para editar no Bloco de Notas;
-2. Apague tudo que você adicionou anteriormente. Certifique-se de remover a vírgula na linha anterior ao `WEBAPP_ENDPOINT`;
-3. Salve o arquivo indo em `Arquivo > Salvar` ou usando o atalho `CTRL+S`;
-4. Feche o Bloco de Notas.
+1. Reopen the `settings.json` file, right-clicking on it and selecting to edit with Notepad;
+2. Delete everything you added earlier. Make sure to remove the comma on the line above `WEBAPP_ENDPOINT`;
+3. Save the file by going to `File > Save` or using the shortcut `CTRL+S`;
+4. Close Notepad.
 
-O arquivo deve voltar a ser igual ao exemplo abaixo. Você pode copiá-lo se preferir:
+The file should revert to something like this. You can copy it if you prefer:
 
 ```
 {
@@ -109,11 +107,11 @@ O arquivo deve voltar a ser igual ao exemplo abaixo. Você pode copiá-lo se pre
 }
 ```
 
-## 6. Abrir o Discord novamente
+## 6. Open Discord Again
 
-Pronto! Agora, ao abrir o Discord, você pode aproveitar uma experiência muito mais fluida, sem os incômodos dos anúncios nos vídeos. Divirta-se assistindo e interagindo sem interrupções!
+Done! Now, when you open Discord, you can enjoy a much smoother experience without the annoyance of ads in videos. Have fun watching and interacting without interruptions!
 
-Essa solução tem funcionado perfeitamente por meses. Imagino que eventualmente será preciso fazer o processo de login novamente.
+This solution has been working perfectly for months. I imagine you may need to repeat the login process eventually.
 
-Ainda não testei no Linux, mas há grandes chances de funcionar se você localizar o arquivo correspondente.&#x20;
+I haven’t tested this on Linux yet, but there’s a good chance it will work if you locate the corresponding configuration file.
 
