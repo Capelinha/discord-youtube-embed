@@ -2,7 +2,7 @@
 
 In recent months, ads in YouTube Embeds have become increasingly frequent and annoying. Fortunately, there’s an easy and effective way to connect your YouTube Premium account to Discord to block all these ads. This allows you to enjoy your videos without interruptions, both in chats and in Watch Together sessions with friends, ensuring a smoother and more enjoyable experience.
 
-I'll leave a [support video](https://bit.ly/4gyeMJt) to make it easier to understand. Sorry for my English and my giant post, I tried to make it as clear as possible. I'm a poor autistic programmer from a third world country: 
+I'll leave a [support video](https://bit.ly/4gyeMJt) to make it easier to understand.
 
 Technically speaking, I found a way to configure Discord to open any website in the app window using a parameter called `"WEBAPP_ENDPOINT"`. This lets us access the YouTube login page and link your Discord account with YouTube Premium.
 
